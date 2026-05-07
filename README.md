@@ -72,49 +72,42 @@ https://github.com/Burkhardt0Patrick/Active-Directory-Lab/tree/main/scripts
 ### 🌐 Active Directory (Before User Creation)
 Initial state of Active Directory before user creation.
 
-![AD Empty](images/ad-empty.png)
+![AD Empty](https://github.com/Burkhardt0Patrick/Active-Directory-Lab/blob/README.md/images/Active%20Directory%20(Before%20User%20Creation).png)
 
 ---
 
 ### 👥 Active Directory (After User Creation)
 Users successfully created inside the `_USERS` Organizational Unit.
 
-![AD Users](images/ad-users.png)
+![AD Users](https://github.com/Burkhardt0Patrick/Active-Directory-Lab/blob/README.md/images/Active%20Directory%20(After%20User%20Creation).png)
 
 ---
 
 ### 🔥 PowerShell User Creation (Automation)
 Execution of PowerShell script for bulk user creation.
 
-![PowerShell Script](images/powershell-script.png)
-
----
-
-### 📡 DHCP IPv4 Scope
-Configured DHCP IPv4 scope defining the IP range for clients.
-
-![DHCP IPv4 Scope](images/dhcp-ipv4.png)
+![PowerShell Script](https://github.com/Burkhardt0Patrick/Active-Directory-Lab/blob/README.md/images/powershell-script.png)
 
 ---
 
 ### 📍 DHCP Address Pool
 Defined IP address range assigned to DHCP clients.
 
-![DHCP Address Pool](images/dhcp-address-pool.png)
+![DHCP Address Pool](https://github.com/Burkhardt0Patrick/Active-Directory-Lab/blob/README.md/images/DHCP%20Address%20Pool.png)
 
 ---
 
 ### ⚙️ DHCP Scope Options
 Configured gateway, DNS server, and domain name options.
 
-![DHCP Scope Options](images/dhcp-scope-options.png)
+![DHCP Scope Options](https://github.com/Burkhardt0Patrick/Active-Directory-Lab/blob/README.md/images/DHCP%20Scope%20Options.png)
 
 ---
 
 ### 📊 DHCP Leases
 Active IP assignments issued to connected clients.
 
-![DHCP Leases](images/dhcp-leases.png)
+![DHCP Leases](https://github.com/Burkhardt0Patrick/Active-Directory-Lab/blob/README.md/images/DHCP%20Leases.png)
 
 ---
 
