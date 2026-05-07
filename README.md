@@ -1,27 +1,31 @@
 # 👥 Active Directory Home Lab
 
 Windows Active Directory home lab built using VirtualBox and PowerShell automation.  
-This project simulates a real-world enterprise environment with a Domain Controller, DNS, DHCP, and domain-joined client machines.
+This project simulates a real enterprise IT environment with a Domain Controller, DNS, DHCP, and domain-joined client machines, including automated user provisioning.
 
 ---
 
-## 🖥️ Lab Overview
+## 🧠 Overview
 
-This environment was built to practice Windows Server administration and Active Directory concepts in a safe, isolated lab using VirtualBox.
+This lab was built to practice and demonstrate Windows Server administration and core Active Directory concepts in a safe, isolated virtual environment using VirtualBox.
 
-### Infrastructure
+It includes domain configuration, network services, and PowerShell automation for user management.
 
-- **DC01 (Windows Server)**
-  - Active Directory Domain Services (AD DS)
-  - DNS Server
-  - DHCP Server
+---
 
-- **Client Machine (Windows 10)**
-  - Domain Joined
+## 🖥️ Infrastructure
 
-- **Network Setup**
-  - Internal VirtualBox Network
-  - NAT for internet access
+**DC01 (Windows Server)**
+- Active Directory Domain Services (AD DS)
+- DNS Server
+- DHCP Server
+
+**Client Machine (Windows 10)**
+- Joined to the domain
+
+**Network Configuration**
+- Internal VirtualBox Network
+- NAT for internet access
 
 ---
 
@@ -40,18 +44,18 @@ This environment was built to practice Windows Server administration and Active 
 ## ⚙️ Features Implemented
 
 - Active Directory Domain setup
-- Organizational Units (OUs)
-- Bulk user creation via PowerShell
+- Organizational Units (OUs) creation
+- Bulk user creation using PowerShell automation
 - DHCP scope configuration
 - DNS resolution inside the domain
-- Domain joining process
+- Domain join configuration (Windows 10 client)
 - Internal network segmentation
 
 ---
 
 ## 🔥 PowerShell Automation
 
-User creation and Active Directory provisioning were automated using a PowerShell script.
+User provisioning in Active Directory was fully automated using a PowerShell script.
 
 👉 View scripts here:  
 https://github.com/Burkhardt0Patrick/Active-Directory-Lab/tree/main/scripts
@@ -60,55 +64,94 @@ https://github.com/Burkhardt0Patrick/Active-Directory-Lab/tree/main/scripts
 
 ## 📸 Screenshots
 
-### Domain Controller (DC01)
-
-![DC01](images/dc01-server.png)
-
----
-
-### Active Directory Users and Computers
-
-![AD Users](images/dc01-ad-users.png)
+### 🖥️ Server Manager (DC01)
+![Server Manager](images/server-manager.png)
 
 ---
 
-### PowerShell User Creation Process
+### 🌐 Active Directory (Before User Creation)
+Initial state of Active Directory before user creation.
 
-![PowerShell](images/powershell.png)
-
----
-
-### DHCP Configuration
-
-![DHCP](images/dhcp.png)
+![AD Empty](images/ad-empty.png)
 
 ---
 
-### Client Machine Joined to Domain
+### 👥 Active Directory (After User Creation)
+Users successfully created inside the `_USERS` Organizational Unit.
 
-![Domain Join](images/domain-joined.png)
+![AD Users](images/ad-users.png)
+
+---
+
+### 🔥 PowerShell User Creation (Automation)
+Execution of PowerShell script for bulk user creation.
+
+![PowerShell Script](images/powershell-script.png)
+
+---
+
+### 📡 DHCP IPv4 Scope
+Configured DHCP IPv4 scope defining the IP range for clients.
+
+![DHCP IPv4 Scope](images/dhcp-ipv4.png)
+
+---
+
+### 📍 DHCP Address Pool
+Defined IP address range assigned to DHCP clients.
+
+![DHCP Address Pool](images/dhcp-address-pool.png)
+
+---
+
+### ⚙️ DHCP Scope Options
+Configured gateway, DNS server, and domain name options.
+
+![DHCP Scope Options](images/dhcp-scope-options.png)
+
+---
+
+### 📊 DHCP Leases
+Active IP assignments issued to connected clients.
+
+![DHCP Leases](images/dhcp-leases.png)
 
 ---
 
 ## 🎯 What I Learned
 
-- Windows Server administration
+- Windows Server administration (AD DS, DNS, DHCP)
 - Active Directory structure and user management
-- DNS and DHCP configuration
-- PowerShell scripting and automation
-- Domain networking concepts
-- Virtual machine networking (VirtualBox)
+- PowerShell scripting for automation
+- Network configuration and IP management
+- Domain-based infrastructure concepts
+- Virtual machine networking using VirtualBox
 
 ---
 
 ## 🚀 Future Improvements
 
 - Group Policy Objects (GPOs)
-- File server with permissions
+- File server with permissions and shares
 - Centralized logging and monitoring
 - Security hardening policies
-- SIEM integration (Splunk / ELK)
+- SIEM integration (Splunk / ELK Stack)
 
 ---
 
 ## 📁 Project Structure
+
+```text
+scripts/
+├── create-users.ps1
+└── names.txt
+
+images/
+├── server-manager.png
+├── ad-empty.png
+├── ad-users.png
+├── powershell-script.png
+├── dhcp-ipv4.png
+├── dhcp-address-pool.png
+├── dhcp-scope-options.png
+└── dhcp-leases.png
